@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Idle Hacker</title>
+	<link rel="stylesheet" type="text/css" href="lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body ng-app="IdleHacker">
+<div class="container-fluid">
+
+<div ng-view>
+	
+</div>
+
+</div>
+
+
+<!--ANGULAR AND ANGULAR-ROUTE-->
+<script src="lib/bower_components/angular/angular.min.js"></script>
+<script src="lib/bower_components/angular-route/angular-route.min.js"></script>
+<!--FIREBASE-->
+<script src="lib/bower_components/firebase/firebase.js"></script>
+<!--JQUERY-->
+<script src="lib/bower_components/jquery/dist/jquery.min.js"></script>
+<!--APP-->
+<script src="app/app.js"></script>
+<script src="app/values/FireCreds.js"></script>
+<!-- Factories -->
+<script src="app/factories/AuthFactory.js"></script>
+<!--CONTROLLERS-->
+<script src="app/controllers/navCtrl.js"></script>
+<script src="app/controllers/loginCtrl.js"></script>
+<script src="app/controllers/clickerCtrl.js"></script>
+<script src="app/controllers/upgradesCtrl.js"></script>
+</body>
+</html>

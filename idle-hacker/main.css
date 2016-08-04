@@ -1,0 +1,356 @@
+/**************
+NAVBAR
+**************/
+
+#navbar {
+	background-image: url("img/nav-bar.png");
+	height: 70px;
+}
+ body {
+ 	background: #1e1e1e;
+ }
+
+.idleHackerNav {
+	height: 60px;
+	width: 250px;
+}
+
+.logout {
+	float: right;
+	font-size: 20px;
+	background: rgba(45, 45, 45, .8);
+	border-radius: 3px;
+	height: 50px;
+	width: 100px;
+	text-align: center;
+	padding-top: 10px;
+	margin-top: 10px;
+	color: #eaeaea;
+}
+
+.logout:hover {
+	background: rgba(45, 45, 45, 1);
+	color: #eaeaea;
+}
+
+
+/****************
+BACKGROUND IMAGE
+****************/
+.logoContainer {
+	width: 100%;
+	height: 10px;
+}
+
+.logoLogin {
+	height: 300px;
+	width: 1200px;
+	margin: 0 auto;
+	opacity: .15;
+	margin: 0 auto;
+	display: block;
+	position: relative;
+	bottom: 350px;
+	z-index: -100;
+}
+
+
+/**************
+LOGIN BODY
+**************/
+.loginTitle {
+  border-radius: 7px;
+	width: 500px;
+	height: 500px;
+	margin: 0 auto;
+	margin-top: 60px;
+	color: #e1e1e1;
+	background: rgba(45, 45, 45, .8);
+}
+
+.loginText {
+	text-align: center;
+	padding-top: 20px;
+}
+
+.google {
+	height: 250px;
+	width: 55%;
+  margin: 0 auto;
+	left: 420px;
+	top: 140px;
+	display: block;
+	max-width: 100%;
+  border-radius: 50%;
+}
+
+
+/**************
+LOGIN BUTTON
+**************/
+
+.buttRow {
+	width: 100%;
+  display: inline-box;
+  display: inline-flex;
+}
+.buttRow > div {
+  position: relative;
+  width: 160px;
+  height: 50px;
+  margin: 0 15px;
+  perspective: 1000px;
+  margin: 0 auto;
+}
+.buttRow > div > a {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transform: translateZ(-25px);
+  transition: transform 0.25s;
+  top: 40px;
+}
+.buttRow > div > a::before, .buttRow > div > a::after {
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  width: 160px;
+  height: 50px;
+  position: absolute;
+  border: 3px solid rgba(0, 0, 0, .8);
+  box-sizing: border-box;
+  content: "Login";
+  display: box;
+  display: flex;
+  border-radius: 2px;
+}
+.buttRow > div > a::before {
+  background-color: #5391c9;
+  color: #fff;
+  transform: rotateY(0deg) translateZ(0px);
+}
+.buttRow > div > a::after {
+  background-color: #c98b53;
+  border-color: #1e1e1e;
+  color: #fff;
+  transform: rotateX(90deg) translateZ(25px);
+}
+.buttRow > div > a:hover {
+  transform: translateZ(-25px) rotateX(-90deg);
+}
+
+.buttRow {
+  font-family: "Oswald", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
+  padding: 0;
+  margin: 0;
+}
+
+
+/**************
+CLICKER BODY
+**************/
+
+/******************
+CURRENCY CONTAINER
+*******************/
+
+.currencyContainer {
+  background: grey;
+  overflow: hidden;
+}
+
+#currency {
+  position: relative;
+  margin: 0 auto;
+  width: 40px;
+  height: 40px;
+  right: 5px;
+}
+
+#mpsCounter {
+  margin: 0 auto;
+  width: 40px;
+  height: 50px;
+}
+
+
+/******************
+SCREENSHOT CONTAINER
+*******************/
+
+.screenshotContainer {
+  background: grey;
+  margin-top: 20px;
+}
+
+#screenshot {
+  background: orange;
+  height: 200px;
+  width: 300px;
+  border-radius: 15px;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+
+
+/******************
+CLICKER CONTAINER
+*******************/
+
+#clickAreaContainer {
+  margin-top: 20px;
+}
+
+#clickArea {
+  height: 180px;
+  width: 100px;
+  margin: 0 auto;
+}
+
+
+/******************
+UPGRADES CONTAINER
+*******************/
+
+.buttonHolder {
+  margin: 0 auto;
+}
+
+.UPGRADES {
+  margin-top: 10px;
+  padding-top: 10px;
+  text-align: center;
+  background: lightblue;
+  color: black;
+  width: 100px;
+  height: 40px;
+  display: inline-block;
+}
+
+.OPTIONS {
+  margin-top: 10px;
+  padding-top: 10px;
+  text-align: center;
+  background: lightblue;
+  color: black;
+  width: 100px;
+  height: 40px;
+  display: inline-block;
+}
+
+/******************
+UPGRADES CONTAINER
+*******************/
+
+.upgradeAreaContainer {
+  background: grey;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+/*
+  UPGRADE 1
+*/
+
+#upgradeArea1 {
+  position: relative;
+  float: left;
+  height: 100px;
+  width: 300px;
+  background: orange;
+  left: 50px;
+}
+
+#CodePower {
+  margin-right: 0;
+  display: inline;
+}
+
+#codeLvl {
+  display: inline;
+  margin-left: 10px; 
+}
+
+/*
+  UPGRADE 2
+*/
+
+#upgradeArea2 {
+  position: relative;
+  float: right;
+  height: 100px;
+  width: 300px;
+  background: orange;
+  right: 50px;
+}
+
+#mountainDew {
+  display: inline;
+  margin-right: 0;
+}
+
+#mountainDewLvl {
+  display: inline;
+  margin-left: 10px;
+}
+
+/*
+  UPGRADE 3
+*/
+
+#upgradeArea3 {
+  position: relative;
+  float: left;
+  height: 100px;
+  width: 300px;
+  background: orange;
+  left: 50px;
+}
+
+#shortcutKeys {
+  display: inline;
+  margin-right: 0;
+}
+
+#shortcutKeysLvl {
+  display: inline;
+  margin-left: 10px;
+}
+
+/*
+  UPGRADE 4
+*/
+
+#upgradeArea4 {
+  position: relative;
+  float: right;
+  height: 100px;
+  width: 300px;
+  background: orange;
+  right: 50px;
+}
+
+#Angular {
+  display: inline;
+  margin-right: 0;
+}
+
+#angularLvl {
+  display: inline;
+  margin-left: 10px;
+}
+
+
+
+
+
+
+
+
