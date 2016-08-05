@@ -157,26 +157,66 @@ LOGIN BUTTON
 CLICKER BODY
 **************/
 
+#clickArea {
+  margin: 0 auto;
+}
+
+.desk {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  height: 450px;
+  width: 650px;
+  top: 150px;
+  left: 40px;
+}
+
+
 /******************
 CURRENCY CONTAINER
 *******************/
 
+.currencyHolder {
+  display: block;
+  margin: 0 auto;
+  margin-top: 40px;
+  width: 400px;
+  height: 100px;
+}
+
 .currencyContainer {
-  background: grey;
   overflow: hidden;
+  position: fixed;
+  margin-left: 35%;
+  z-index: 1000;
+  background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .1));
+  height: 200px
+}
+
+.currencyFont {
+  font-family: 'Press Start 2P', cursive;
+  color: white;
+}
+
+.mpsFont {
+  font-family: 'Press Start 2P', cursive;
+  color: white;
 }
 
 #currency {
   position: relative;
   margin: 0 auto;
   width: 40px;
-  height: 40px;
-  right: 5px;
+  bottom: 85px;
+  right: 80px;
 }
 
 #mpsCounter {
   margin: 0 auto;
-  width: 40px;
+  position: relative;
+  left: 50px;
+  bottom: 50px;
+  width: 200px;
   height: 50px;
 }
 
@@ -214,45 +254,14 @@ CLICKER CONTAINER
   margin: 0 auto;
 }
 
-
-/******************
-UPGRADES CONTAINER
-*******************/
-
-.buttonHolder {
-  margin: 0 auto;
-}
-
-.UPGRADES {
-  margin-top: 10px;
-  padding-top: 10px;
-  text-align: center;
-  background: lightblue;
-  color: black;
-  width: 100px;
-  height: 40px;
-  display: inline-block;
-}
-
-.OPTIONS {
-  margin-top: 10px;
-  padding-top: 10px;
-  text-align: center;
-  background: lightblue;
-  color: black;
-  width: 100px;
-  height: 40px;
-  display: inline-block;
-}
-
 /******************
 UPGRADES CONTAINER
 *******************/
 
 .upgradeAreaContainer {
-  background: grey;
-  margin-top: 10px;
-  overflow: hidden;
+  position: relative;
+  top: 130px;
+  margin-top: 20px;
 }
 
 /*
@@ -262,10 +271,37 @@ UPGRADES CONTAINER
 #upgradeArea1 {
   position: relative;
   float: left;
-  height: 100px;
-  width: 300px;
-  background: orange;
+  height: 130px;
+  width: 350px;
   left: 50px;
+  color: white;
+  font-family: 'Press Start 2P', cursive;
+}
+
+#codeLvl {
+  position: relative;
+  bottom: 115px;
+  left: 300px;
+}
+
+#clickToolTip {
+  position: relative;
+  font-size: 12px;
+  left: 120px;
+  bottom: 90px;
+}
+
+#codeUpgradeCost {
+  position: relative;
+  bottom: 90px;
+  left: 120px;
+}
+
+.clickFrame {
+  height: 130px;
+  width: 350px;
+  position: relative;
+  display: block;
 }
 
 #CodePower {

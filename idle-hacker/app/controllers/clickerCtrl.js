@@ -10,8 +10,8 @@ app.controller('clickerCtrl', function($scope, $location) {
 	let mpsCounter = document.getElementById('mpsCounter');
 	let clickArea = document.getElementById('clickAreaContainer');
 
-	currency.innerHTML = "<h1>$" + currentCurrency + "<h1>";
-	mpsCounter.innerHTML = "<h4>" + mps + " m/s</h4>"
+	currency.innerHTML = "<h1 class='currencyFont'>" + currentCurrency + "<h1>";
+	mpsCounter.innerHTML = "<h4 class='mpsFont'>" + mps + " m/s</h4>"
 
 
 	/*
@@ -20,7 +20,7 @@ app.controller('clickerCtrl', function($scope, $location) {
 
 	clickArea.addEventListener("click", function($scope) {
 		currentCurrency = currentCurrency + click;
-		currency.innerHTML = "<h1>$" + currentCurrency + "<h1>";
+		currency.innerHTML = "<h1 class='currencyFont'>" + currentCurrency + "<h1>";
 		console.log('HELLO');
 	});
 
@@ -32,17 +32,17 @@ app.controller('clickerCtrl', function($scope, $location) {
 	let codeUpgradeCost = 20;
 	let codeLvl = 0;
 
-	document.getElementById('codeLvl').innerHTML = "lvl " + codeLvl;
+	document.getElementById('codeLvl').innerHTML = codeLvl;
 	document.getElementById('codeUpgradeCost').innerHTML = "$" + codeUpgradeCost;
 	document.getElementById('clickToolTip').innerHTML = "+" + click + " to code power";
 
 	upgradeClick.addEventListener("click", function($scope) {
 		if (currentCurrency >= codeUpgradeCost) {
 			codeLvl++;
-			document.getElementById('codeLvl').innerHTML = "lvl " + codeLvl;
+			document.getElementById('codeLvl').innerHTML = codeLvl;
 
 			currentCurrency = currentCurrency - codeUpgradeCost;
-			currency.innerHTML = "<h1>$" + currentCurrency + "<h1>";
+			currency.innerHTML = "<h1 class='currencyFont'>" + currentCurrency + "<h1>";
 			click ++;
 
 			if (codeLvl >= 1) {
@@ -73,16 +73,16 @@ app.controller('clickerCtrl', function($scope, $location) {
 	upgradeDEW.addEventListener("click", function($scope) {
 		if (currentCurrency >= moneyUpgradeCost) {
 			mps = mps + mps1;
-			mpsCounter.innerHTML = "<h4>" + mps + " m/s</h4>"
+			mpsCounter.innerHTML = "<h4 class='mpsFont'>" + mps + " m/s</h4>"
 			mountainDewLvl++;
 			document.getElementById('mountainDewLvl').innerHTML = "lvl " + mountainDewLvl;
 
 			currentCurrency = currentCurrency - moneyUpgradeCost;
-			currency.innerHTML = "<h1>$" + currentCurrency + "<h1>";
+			currency.innerHTML = "<h1 class='currencyFont'>" + currentCurrency + "<h1>";
 
 			window.setInterval(function($scope){
 				currentCurrency = currentCurrency + (mps1 / 10);
-				currency.innerHTML = "<h1>$" + currentCurrency + "<h1>";
+				currency.innerHTML = "<h1 class='currencyFont'>" + currentCurrency + "<h1>";
 			}, timer1);	
 
 			if (mountainDewLvl >= 1) {
@@ -112,16 +112,16 @@ app.controller('clickerCtrl', function($scope, $location) {
 	upgradeShortcutKeys.addEventListener("click", function($scope) {
 		if (currentCurrency >= shortcutKeysCost) {
 			mps = mps + mps2;
-			mpsCounter.innerHTML = "<h4>" + mps + " m/s</h4>"
+			mpsCounter.innerHTML = "<h4 class='mpsFont'>" + mps + " m/s</h4>"
 			shortcutKeysLvl++;
 			document.getElementById('shortcutKeysLvl').innerHTML = "lvl " + shortcutKeysLvl;
 
 			currentCurrency = currentCurrency - shortcutKeysCost;
-			currency.innerHTML = "<h1>$" + currentCurrency + "<h1>";
+			currency.innerHTML = "<h1 class='currencyFont'>" + currentCurrency + "<h1>";
 
 			window.setInterval(function($scope){
 				currentCurrency = Math.round(currentCurrency + (mps2 / 20));
-				currency.innerHTML = "<h1>$" + currentCurrency + "<h1>";
+				currency.innerHTML = "<h1 class='currencyFont'>" + currentCurrency + "<h1>";
 			}, timer2);	
 
 			if (shortcutKeysLvl >= 1) {
@@ -141,7 +141,7 @@ app.controller('clickerCtrl', function($scope, $location) {
 	let upgradeAngular = document.getElementById('upgradeArea4');
 	let angularCost = 5000;
 	let angularLvl = 0;
-	let mps3 = 50;
+	let mps3 = 100;
 	let timer3 = 1000 / mps3;
 
 	document.getElementById('angularLvl').innerHTML = "lvl " + angularLvl;
@@ -151,16 +151,16 @@ app.controller('clickerCtrl', function($scope, $location) {
 	upgradeAngular.addEventListener("click", function($scope) {
 		if (currentCurrency >= angularCost) {
 			mps = mps + mps3;
-			mpsCounter.innerHTML = "<h4>" + mps + " m/s</h4>"
+			mpsCounter.innerHTML = "<h4 class='mpsFont'>" + mps + " m/s</h4>"
 			angularLvl++;
 			document.getElementById('angularLvl').innerHTML = "lvl " + angularLvl;
 
 			currentCurrency = currentCurrency - angularCost;
-			currency.innerHTML = "<h1>$" + currentCurrency + "<h1>";
+			currency.innerHTML = "<h1 class='currencyFont'>" + currentCurrency + "<h1>";
 
 			window.setInterval(function($scope){
-				currentCurrency = currentCurrency + (mps3 / 50);
-				currency.innerHTML = "<h1>$" + currentCurrency + "<h1>";
+				currentCurrency = currentCurrency + (mps3 / 100);
+				currency.innerHTML = "<h1 class='currencyFont'>" + currentCurrency + "<h1>";
 			}, timer3);	
 
 			if (angularLvl >= 1) {

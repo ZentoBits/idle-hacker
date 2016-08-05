@@ -6,13 +6,15 @@
 	<!--CURRENCY CONTAINER-->
 	<div class="row">
 		<div class="currencyContainer" class="col-md-12">
-			<div id="currency"></div>
+			<img src="img/currency-holder.png" class="currencyHolder">
+			<div id="currency">
+			</div>
 			<div id="mpsCounter"></div>
 		</div>
 	</div>
 
 	<!--SCREEN CONTAINER-->
-	<div class="row">
+	<div class="row" ng-hide="true">
 		<div class="screenshotContainer" class="col-md-12">
 			<div id="screenshot"></div>
 		</div>
@@ -20,10 +22,7 @@
 
 	<!--CLICK AREA-->
 	<div class="row">
-		<div id="clickAreaContainer" class="col-md-12" ng-click="">
-			<div id="clickArea">
-				<img class="blurby" src="img/mainChar.png">
-			</div>
+		<div id="clickAreaContainer" class="col-md-12">			<img src="img/devRoom.png" class="desk">
 		</div>
 	</div>
 
@@ -32,7 +31,8 @@
 		<div class="upgradeAreaContainer">
 			<div class="upgradeContainer">
 				<div id="upgradeArea1">
-					<h4 id="CodePower">Code Power</h4><p id="codeLvl"></p>
+					<img src="img/clickPowerFrame.png" class="clickFrame">
+					<h4 id="CodePower"></h4><p id="codeLvl"></p>
 					<h5 id="codeUpgradeCost"></h5>
 					<p id="clickToolTip"></p>
 				</div>	
