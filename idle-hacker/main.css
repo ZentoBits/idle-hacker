@@ -33,6 +33,21 @@ NAVBAR
 	color: #eaeaea;
 }
 
+.saveButton {
+  height: 30px;
+  width: 100px;
+  color: white;
+  background: green;
+}
+
+.deleteButton {
+  height: 30px;
+  width: 100px;
+  color: white;
+  background: red;
+  position: relative;
+  z-index: 1000000;
+}
 
 /****************
 BACKGROUND IMAGE
@@ -171,6 +186,22 @@ CLICKER BODY
   left: 40px;
 }
 
+.desk::selection {
+  background-color: transparent;
+}
+
+#clickAmountDisplay::selection {
+  background: transparent;
+}
+
+#clickAmountDisplay {
+  position: absolute;
+  color: white;
+  font-family: 'Press Start 2P', cursive;
+  z-index: 1000;
+  font-size: 20px;
+}
+
 
 /******************
 CURRENCY CONTAINER
@@ -304,6 +335,10 @@ UPGRADES CONTAINER
   display: block;
 }
 
+.clickFrame::selection {
+  background: transparent;
+}
+
 #CodePower {
   margin-right: 0;
   display: inline;
@@ -321,20 +356,47 @@ UPGRADES CONTAINER
 #upgradeArea2 {
   position: relative;
   float: right;
-  height: 100px;
-  width: 300px;
-  background: orange;
+  height: 130px;
+  width: 350px;
   right: 50px;
+  color: white;
+  font-family: 'Press Start 2P', cursive;
 }
 
-#mountainDew {
-  display: inline;
-  margin-right: 0;
+#mountainDewLvl {
+  position: relative;
+  bottom: 120px;
+  left: 295px;
+  font-size: 15px;
+}
+
+#mps1ToolTip {
+  position: relative;
+  font-size: 12px;
+  left: 130px;
+  bottom: 90px;
+}
+
+.dewFrame {
+  height: 130px;
+  width: 350px;
+  position: relative;
+  display: block;
+}
+
+.dewFrame::selection {
+  background: transparent;
 }
 
 #mountainDewLvl {
   display: inline;
   margin-left: 10px;
+}
+
+#mountainDewCost {
+  position: relative;
+  bottom: 90px;
+  left: 130px;
 }
 
 /*
@@ -344,10 +406,38 @@ UPGRADES CONTAINER
 #upgradeArea3 {
   position: relative;
   float: left;
-  height: 100px;
-  width: 300px;
-  background: orange;
+  height: 130px;
+  width: 350px;
   left: 50px;
+  color: white;
+  font-family: 'Press Start 2P', cursive;
+}
+
+#shortcutKeysLvl {
+  position: relative;
+  bottom: 110px;
+  left: 295px;
+  font-size: 15px;
+}
+
+#shortcutKeysCost {
+  position: relative;
+  bottom: 90px;
+  left: 130px;
+}
+
+#mps2ToolTip {
+  position: relative;
+  font-size: 12px;
+  left: 130px;
+  bottom: 90px;
+}
+
+.shortcutFrame {
+  height: 130px;
+  width: 350px;
+  position: relative;
+  display: block;
 }
 
 #shortcutKeys {

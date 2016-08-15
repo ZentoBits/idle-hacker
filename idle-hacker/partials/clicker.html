@@ -1,5 +1,11 @@
 <!-- NAV BAR -->
-<div ng-include="'./partials/nav.html'" ng-controller="navCtrl">
+<div class="row">
+	<div class="col-md-12" id="navbar">
+		<img src="img/logo-4k.png" class="idleHackerNav">
+		<a ng-href="#/logout" class="logout">Logout</a>
+		<div class="saveButton" ng-click="saveGame()">SAVE</div>
+		<div class="deleteButton" ng-click="deleteStats()">DELETE</div>
+	</div>
 </div>
 
 <div class="container-fluid">
@@ -13,16 +19,11 @@
 		</div>
 	</div>
 
-	<!--SCREEN CONTAINER-->
-	<div class="row" ng-hide="true">
-		<div class="screenshotContainer" class="col-md-12">
-			<div id="screenshot"></div>
-		</div>
-	</div>
-
 	<!--CLICK AREA-->
 	<div class="row">
-		<div id="clickAreaContainer" class="col-md-12">			<img src="img/devRoom.png" class="desk">
+		<div id="clickAreaContainer" class="col-md-12">
+			<p id="clickAmountDisplay"></p>
+			<img src="img/devRoom.png" class="desk">
 		</div>
 	</div>
 
@@ -32,7 +33,7 @@
 			<div class="upgradeContainer">
 				<div id="upgradeArea1">
 					<img src="img/clickPowerFrame.png" class="clickFrame">
-					<h4 id="CodePower"></h4><p id="codeLvl"></p>
+					<h4 id="CodePower"></h4><p id="codeLvl" ></p>
 					<h5 id="codeUpgradeCost"></h5>
 					<p id="clickToolTip"></p>
 				</div>	
@@ -40,7 +41,8 @@
 			
 			<div class="upgradeContainer">
 				<div id="upgradeArea2">
-					<h4 id="mountainDew">Mountain Dew</h4><p id="mountainDewLvl"></p>
+					<img src="img/mountainDewFrame.png" class="dewFrame">
+					<h4 id="mountainDew"></h4><p id="mountainDewLvl"></p>
 					<h5 id="mountainDewCost"></h5>
 					<p id="mps1ToolTip"></p>
 				</div>	
@@ -52,7 +54,8 @@
 	<div class="row">
 		<div class="upgradeAreaContainer">
 			<div id="upgradeArea3">
-				<h4 id="shortcutKeys">Shortcut Keys</h4><p id="shortcutKeysLvl"></p>
+			<img src="img/shortcutKeysFrame.png" class="shortcutFrame">
+				<h4 id="shortcutKeys"></h4><p id="shortcutKeysLvl"></p>
 				<h5 id="shortcutKeysCost"></h5>
 				<p id="mps2ToolTip"></p>
 			</div>

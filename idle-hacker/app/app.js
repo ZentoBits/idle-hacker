@@ -1,7 +1,18 @@
 var app = angular.module('IdleHacker', ['ngRoute'])
+
+
+
 .constant("firebaseURL", "https://idlehacker-76c77.firebaseio.com/");
 
-app.config(function($routeProvider) {
+app.config(function($routeProvider, FireCreds) {
+ const authConfig = {
+  apiKey: FireCreds.apiKey,
+  authDomain: FireCreds.authDomain,
+  databaseURL: FireCreds.databaseURL,
+  storageBucket: FireCreds.storageBucket
+ };
+
+ firebase.initializeApp(authConfig);
 
 $routeProvider.
 	when('/', {
